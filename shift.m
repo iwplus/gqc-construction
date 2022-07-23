@@ -1,6 +1,6 @@
 
-partisi = [3 3]; #permutasi dari kode
-x = [1 1 0 1 1 0]; #pembangun di modul
+partisi = [3 3]; #permutation of the code
+x = [1 1 0 1 1 0]; #specify a generator polynomial in a binary vector, i.e. represent the polynomial sum_{i=0}^n a_ix^i with the vector (a_i)_{i=0}^n
 banyakx = size(x,1);
   
 y = zeros(banyakx.*kpk(partisi),length(x));
