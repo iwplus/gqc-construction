@@ -30,15 +30,15 @@ disp(u1);
 disp('');
 
 k = size(u1,1);
-kard = 2.^k; ## ganti sesuai mod yang digunakan
+kard = 2.^k; ## change the value according to prime number you use, e.g. p = 2 in this example
 katakode = zeros(kard,size(u1,2));
 
-koef = dec2base(2^k-1:-1:0,2)-'0'; #ganti sesuai dengan mod
+koef = dec2base(2^k-1:-1:0,2)-'0'; #change the value according to prime number you use, e.g. p = 2 in this example
 
 for i = 1:kard,
   for j = 1:k,
     temp = koef(i,j)*u1(j,:);
-    katakode(i,:) = mod(katakode(i,:)+temp,2); # ganti angka terakhir sesuai dengan mod berapa
+    katakode(i,:) = mod(katakode(i,:)+temp,2); # change the last value according to prime number you use, e.g. p = 2 in this example
   endfor
 endfor
 #u = [u1;add(u1)]; # hitung semua unsur dalam kode
@@ -68,7 +68,7 @@ kard = size(katakode,1);
 disp('Kardinalitas Kode = ');
 disp(kard);
 disp('');
-k = log(kard)./log(2); ### ganti angka log(...) sesuai dengan mod yang digunakan
+k = log(kard)./log(2); ### change the value in log(...) according to prime number you use, e.g. p = 2 in this example
 disp('Dimensi Kode = ');
 disp(k);
 disp('');
