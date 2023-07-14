@@ -11,6 +11,4 @@ for i = 1:p,
   endif
   y = [y x1];
 endfor
-#disp('Shift dari x adalah');
-#disp(y);
 endfunction
